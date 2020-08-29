@@ -95,7 +95,7 @@
           ],
           upName: [
             {required: true, message: '请输入上传者姓名', trigger: 'blur'},
-            {max: 10, message: '长度最大为10', trigger: 'blur' }
+            {max: 15, message: '长度最大为15', trigger: 'blur' }
           ],
           upAvatar: [
             {required: true, message: '请输入上传者头像', trigger: 'blur'}
@@ -107,7 +107,8 @@
     methods: {
       //单图片回写
       writeURL(res) {
-        this.singlegame.preImage = res;
+        console.log(res)
+        this.singlegame.preImage = res.filePath;
       },
       //单图片删除
       deleteURL() {
@@ -115,7 +116,7 @@
       },
       //多图片回写
       writeURLList(res) {
-        this.singlegame.images +=  ', ' + res;
+        this.singlegame.images +=  ', ' + res.filePath;
       },
       //多图片删除
       deleteURLByPath(path) {

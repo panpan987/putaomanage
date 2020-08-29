@@ -6,6 +6,7 @@ import VueRouter from 'vue-router'
 const home = () => import("../views/home");
 const singlegame = () => import("../components/singlegame")
 const cartoon = () => import("../components/cartoon")
+const minivideo = () => import("../components/minivideo")
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,11 @@ const routes = [
         path: "/home/cartoon",
         name: cartoon,
         component: cartoon
+      },
+      {
+        path: "/home/minivideo",
+        name: minivideo,
+        component: minivideo
       }
     ]
   },

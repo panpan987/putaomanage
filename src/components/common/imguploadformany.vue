@@ -55,15 +55,16 @@
       //删除之前的回调,若返回false什么也不做,返回true为直接删除
       handleBeforeRemove(file, fileList) {
         if (confirm("您确定要删除图片吗?")){
-          this.$axios.post(`delete`,{filePath: file.response}).then(res => {
-            this.$emit("deleteURLByPath", ", " + file.response);
-            return res.data;
+          //确定就把图片的服务器路径传给后台
+          this.$axios.post(`delete`,{filePath: file.response.filePath}).then(res => {
+            //并且把表单中的filePath字符串删了
+            this.$emit("deleteURLByPath", ", " + file.response.filePath);
+
           });
 
           return true;
         }
         return false;
-
       },
       //删除对应图片,需要要执行该方法之前传递参数,否则信息会没有
       handleRemove(file, fileList) {

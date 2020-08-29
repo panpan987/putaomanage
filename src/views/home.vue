@@ -28,7 +28,7 @@
         </el-menu-item>
 
         <el-menu-item index="5">
-          泡面视频
+          <router-link to="/home/minivideo">泡面视频</router-link>
         </el-menu-item>
 
         <el-menu-item index="6">

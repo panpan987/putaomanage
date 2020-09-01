@@ -12,26 +12,30 @@
         active-text-color="#ffd04b">
 
         <el-menu-item index="1">
-          首页管理
+          <router-link to="/home/carouser">首页轮播图</router-link>
         </el-menu-item>
 
         <el-menu-item index="2">
-          <router-link to="/home/singlegame">单机游戏</router-link>
+          <router-link to="/home/showinmainpage">首页展示的candy</router-link>
         </el-menu-item>
 
         <el-menu-item index="3">
-          <router-link to="/home/cartoon">经典番剧</router-link>
+          <router-link to="/home/singlegame">单机游戏</router-link>
         </el-menu-item>
 
         <el-menu-item index="4">
-          学习园地
+          <router-link to="/home/cartoon">经典番剧</router-link>
         </el-menu-item>
 
         <el-menu-item index="5">
-          <router-link to="/home/minivideo">泡面视频</router-link>
+          学习园地
         </el-menu-item>
 
         <el-menu-item index="6">
+          <router-link to="/home/minivideo">泡面视频</router-link>
+        </el-menu-item>
+
+        <el-menu-item index="7">
           用户
         </el-menu-item>
 

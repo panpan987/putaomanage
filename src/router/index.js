@@ -7,6 +7,8 @@ const home = () => import("../views/home");
 const singlegame = () => import("../components/singlegame")
 const cartoon = () => import("../components/cartoon")
 const minivideo = () => import("../components/minivideo")
+const carouser = () => import("../components/carouser")
+const showinmainpage = () => import("../components/showinmainpage")
 
 Vue.use(VueRouter)
 
@@ -17,23 +19,33 @@ const routes = [
   },
   {
     path: "/home",
-    name: home,
+    name: 'home',
     component: home,
     children: [
       {
         path: "/home/singlegame",
-        name: singlegame,
+        name: 'singlegame',
         component: singlegame
       },
       {
         path: "/home/cartoon",
-        name: cartoon,
+        name: 'cartoon',
         component: cartoon
       },
       {
         path: "/home/minivideo",
-        name: minivideo,
+        name: 'minivideo',
         component: minivideo
+      },
+      {
+        path: "/home/carouser",
+        name: 'carouser',
+        component: carouser
+      },
+      {
+        path: "/home/showinmainpage",
+        name: 'showinmainpage',
+        component: showinmainpage
       }
     ]
   },

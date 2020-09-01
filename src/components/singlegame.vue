@@ -107,7 +107,7 @@
     methods: {
       //单图片回写
       writeURL(res) {
-        console.log(res)
+        //console.log(res)
         this.singlegame.preImage = res.filePath;
       },
       //单图片删除
@@ -127,7 +127,7 @@
           if (valid) {
             //对", "进行删除
             this.singlegame.images = this.singlegame.images.substr(2);
-            console.log(this.singlegame.images);
+            //console.log(this.singlegame.images);
             this.$axios.post(`item/singlegame/insert`, this.singlegame).then(res => {
               if (res.data) {
                 alert("添加成功");

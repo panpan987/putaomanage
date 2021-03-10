@@ -24,7 +24,7 @@
     data() {
       return {
         //图片上传的地址
-        url: 'http://api.putao.com/api/upload/image',
+        url: 'http://api.putao6379.top/api/upload/image',
         dialogImageUrl: '',
         dialogVisible: false
       };

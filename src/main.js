@@ -6,15 +6,23 @@ import axios from 'axios'
 
 Vue.use(ElementUI);
 
-axios.defaults.baseURL = "http://api.putao.com/api";
+axios.defaults.baseURL = "http://api.pilibili.cn/api";
+
+
+axios.defaults.withCredentials = true;
 
 Vue.prototype.$axios = axios;
 
 import router from './router'
 
+import '@/assets/css/base.css'
+
+import store from './store'
+
 Vue.config.productionTip = false
 
 new Vue({
+  store,
   router,
   render: h => h(App)
 }).$mount('#app')

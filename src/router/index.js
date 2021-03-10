@@ -6,9 +6,11 @@ import VueRouter from 'vue-router'
 const home = () => import("../views/home");
 const singlegame = () => import("../components/singlegame")
 const cartoon = () => import("../components/cartoon")
+const studygarden = () => import("../components/studygarden")
 const minivideo = () => import("../components/minivideo")
 const carouser = () => import("../components/carouser")
 const showinmainpage = () => import("../components/showinmainpage")
+const login = () => import("@/components/common/login")
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,11 @@ const routes = [
         component: cartoon
       },
       {
+        path: "/home/studygarden",
+        name: 'studygarden',
+        component: studygarden
+      },
+      {
         path: "/home/minivideo",
         name: 'minivideo',
         component: minivideo
@@ -46,6 +53,11 @@ const routes = [
         path: "/home/showinmainpage",
         name: 'showinmainpage',
         component: showinmainpage
+      },
+      {
+        path: "/login",
+        name: 'login',
+        component: login
       }
     ]
   },

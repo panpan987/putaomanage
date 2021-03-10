@@ -28,7 +28,7 @@
         </el-menu-item>
 
         <el-menu-item index="5">
-          学习园地
+          <router-link to="/home/studygarden">学习园地</router-link>
         </el-menu-item>
 
         <el-menu-item index="6">
@@ -36,8 +36,9 @@
         </el-menu-item>
 
         <el-menu-item index="7">
-          用户
+          用户管理
         </el-menu-item>
+        <el-button style="margin-left: 20px;font-size: large" type="text" @click="exit">用户退出</el-button>
 
       </el-menu>
     </el-col>
@@ -58,6 +59,35 @@
       },
       handleClose(key, keyPath) {
         console.log(key, keyPath);
+      },
+      exit() {
+        this.$confirm('确定要退出吗?', '提示', {
+          confirmButtonText: '确定',
+          cancelButtonText: '取消',
+          type: 'warning'
+        }).then(() => {
+          this.$store.dispatch('exit');
+          this.$store.commit('clearInfo')
+          this.$message({
+            type: 'success',
+            message: '退出成功!'
+          });
+
+          setTimeout(() => {
+            this.reloadPage()
+          },500);
+          setTimeout(() => {
+            this.reloadPage();
+          },5000);
+        }).catch(() => {
+          this.$message({
+            type: 'info',
+            message: '已取消'
+          });
+        });
+      },
+      reloadPage() {
+        location.reload()
       }
     }
   }

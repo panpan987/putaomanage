@@ -76,6 +76,18 @@
             }]
           },
           {
+            value: '学习园地',
+            label: '学习园地',
+            children: [{
+              value: 'studygarden',
+              label: 'studygarden',
+              children: [{
+                value: '/candydetail',
+                label: '/candydetail'
+              }]
+            }]
+          },
+          {
             value: '泡面视频',
             label: '泡面视频',
             children: [{

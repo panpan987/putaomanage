@@ -1,0 +1,4 @@
+.el-menu .el-menu-item[data-v-3ce5368e]{font-size:large}.login-wrap[data-v-5f645367]{height:100%;background-color:#324152;display:flex;justify-content:center;align-items:center}.login-wrap .login-form[data-v-5f645367]{width:500px;background-color:#fff;border-radius:5px;padding:25px}#app,.el-container{height:100%}.el-main,body,html{padding:0;height:100%}body,html{margin:0}
+  /*!*user-select: none; !* 禁止用户鼠标在页面上选中文字/图片等 *!*!*/
+  /*!*这样式太坑了,导致页面宽度随内容无限拉伸*!*/
+  /*!*min-width: max-content;*!*/a{color:var(--color-text);text-decoration:none}

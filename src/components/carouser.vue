@@ -70,8 +70,11 @@
         }, {
           value: 'cartoon'
         }, {
-          value: 'minivideo'
-        }]
+          value: 'studygarden'
+        },
+          {
+            value: 'minivideo'
+          }]
       }
     },
     methods: {
